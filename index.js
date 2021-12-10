@@ -59,3 +59,17 @@ const time = () => {
 setInterval(() => {
   time();
 }, 1000);
+
+const menu = document.getElementById("menu");
+menu.addEventListener("click", () => {
+  const mid_nav = document.querySelector(".mid_nav");
+  const logo = document.querySelector(".logo");
+
+  if (mid_nav.style.display === "none" || logo.innerText === "HELLO") {
+    mid_nav.style.display = "flex";
+    logo.innerText = "";
+  } else {
+    mid_nav.style.display = "none";
+    logo.innerText = "HELLO";
+  }
+});
